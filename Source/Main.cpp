@@ -9,6 +9,22 @@
 #include <JuceHeader.h>
 #include "MainComponent.h"
 
+struct Car
+{
+    struct CarSeat
+    {
+        bool sitIsLeather;
+    };
+    
+    int numberOfWheels;
+    bool convertible;
+    CarSeat driversSeat;
+    CarSeat navigatorsSeat;
+    
+    bool switchSeats(CarSeat oldSeat, CarSeat newSeat);
+    
+    void accelerate(float howFarToPushPedal);
+};
 //==============================================================================
 class HelloworldApplication  : public juce::JUCEApplication
 {
